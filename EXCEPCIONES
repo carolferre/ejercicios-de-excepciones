@@ -1,0 +1,79 @@
+EXCEPCIONES:
+
+
+Las excepciones son errores que ocurren durante la ejecución del programa. La sintaxis del Código es correcta pero dutante la ejección ha ocurrido algo inesperado.
+
+
+def divide(num1,num2):
+
+  try:
+    return num1/num2
+  except ZeroDivisionError:
+    print("No se puede dividir entre 0")
+    return "Operación errónea"
+    
+
+CAPTURAR VARIAS EXCEPCIONES:
+
+ En un programa se pueden cometer errores de diversos tipos: ZeroDivisionError(no se puede hacer una division por 0) o ValueError(ya que espera un entero) y más.
+ 
+ Pueden haber varias excepciones en un programa. Habría que poner varios except.
+ Finally siempre se lee aunque salte una excepción.
+ 
+ 
+ def divide (num1,num2):
+  
+   try:
+    return num1/num2
+   except ZeroDivisionError:
+    print("No se puede dividir entre 0")
+    return "Operación errónea"
+ 
+while True:
+  try:
+    op1=(int(input("Introduce el primer número: ")
+    op2=(int(input("Introduce el segundo número: ")
+    break
+   except ValueError:
+    print("Los valores introducidos no son correctos, inténtalo de nuevo")
+    
+  operacion=input("Introduce la operación a realizar(suma,resta,multiplica,divide): ")
+  
+if operacion=="suma":
+	print(suma(op1,op2))
+
+elif operacion=="resta":
+	print(resta(op1,op2))
+
+elif operacion=="multiplica":
+	print(multiplica(op1,op2))
+
+elif operacion=="divide":
+	print(divide(op1,op2))
+
+else:
+	print ("Operación no contemplada")
+
+
+print("Operación ejecutada. Continuación de ejecúción del programa ")
+
+
+#************************************************OTRA OPCIÓN SERÍA********************************************
+
+def divide().
+  try:
+    op1=(float(input("Introduce el primer número: ")))
+    op2=(float(input("Introduce el segundo número: "))
+    print("La división es: "+str(op1/op2))
+    
+  except ValueError:
+    print("El dato que ha introducido no es numérico")
+  except ZeroDivisionError:
+    print("No se puede dividir entre 0")
+  finally:
+    print("Cálculo finalizado")
+
+divide()
+
+
+
