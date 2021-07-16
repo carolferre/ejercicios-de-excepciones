@@ -1,0 +1,43 @@
+LANZAMIENTO DE EXCEPCIONES: Cuando lanzamos excepciones de forma intencionada (excepciones propias)
+Con las excepciones propias hay que crear una clase con el nombre de la exceción.
+
+RAISE:
+
+def evaluaEdad(edad):
+  if edad<0:
+    raise MipropioError("No existen edades menores a 0")
+    
+  if edad<20:
+    return "eres muy joven"
+  elif edad<40:
+    return "eres joven"
+  elif edad<65:
+    return "eres maduro"
+  elif edad<100:
+    return "cuídate..."
+    
+#No tiene sentido que un usuario tenga un valor negativo ya que no existe
+
+print(evaluaEdad(-15))
+
+#*****************************************************************OTRO EJEMPLO************************************
+
+import math
+
+def calculaRaiz(num1):
+  
+  if num1<0:
+     raise ValueError ("El número no puede ser negativo")
+  else:
+    return math.sqrt(num1)
+  
+  op1=(int(input("Introduce un número: ")))
+  
+  try:
+    print(calculaRaiz(op1))
+  
+  #Con as asignamos un nombre al error
+  except ValueError as ErrorDeNumeroNegativo:
+    PRINT(ErrorDeNumeroNegativo)
+  
+  print("Programa terminado")
